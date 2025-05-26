@@ -8,6 +8,12 @@ cask "tencent-yuanbao" do
   desc "大模型智能助手"
   homepage "https://yuanbao.tencent.com/"
 
+  livecheck do
+    skip "Stable version URL does not contain version info"
+  end
+
+  depends_on macos: ">= :big_sur"
+  
   app "腾讯元宝.app"
 
   zap trash: [
